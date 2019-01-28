@@ -1,20 +1,12 @@
-# Java SE 9: Try-With-Resources Improvements
-___
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
-Before 9 
-```java 
-
-public static void testARM_Before_Java9() throws IOException{
- BufferedReader reader1 = new BufferedReader(new FileReader("journaldev.txt"));
- try (BufferedReader reader2 = reader1) {
-   System.out.println(reader2.readLine());
- }
-}
-```
-
-java 9
-```java
-
+/**
+ * @author: shenhaizhilong
+ * @date: 2019/1/29 0:04
+ */
 public class TryWithDemo {
 
     public static void readFile(String fileName)
@@ -37,15 +29,9 @@ public class TryWithDemo {
         {
             ex.printStackTrace();
         }
-        
+
     }
     public static void main(String[] args) {
         readFile("Jshell.md");
     }
 }
-
-
-```
-
-## 参考资料
-- [try with resource](https://www.journaldev.com/12940/javase9-try-with-resources-improvements)
