@@ -28,13 +28,14 @@ public interface DBLogging {
         log(message, "Fatal");
     }
 
-    private void log(String message, String msgPrefix)
+    private  void log(String message, String msgPrefix)
     {
         // Step 1: Connect to DataStore
         // Step 2: Log Message with Prefix and styles etc.
         // Step 3: Close the DataStore connection
         System.out.println(String.format("%s - %s", msgPrefix, message));
     }
+    abstract void test3(); // sub -class should inherit and override this method
 
     private static void test()
     {

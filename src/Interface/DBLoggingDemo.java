@@ -6,6 +6,11 @@ package Interface;
  */
 public class DBLoggingDemo implements DBLogging {
 
+    @Override
+    public void test3() {
+        System.out.println("test3");
+    }
+
     public DBLoggingDemo()
     {
 
@@ -17,5 +22,6 @@ public class DBLoggingDemo implements DBLogging {
         log.logFatal("This is Fatal");
         log.logError("This is Error");
         DBLogging.test2();
+
     }
 }
