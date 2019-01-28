@@ -8,4 +8,5 @@ ____
 - 6  [Stream](Stream.md)
 - 7  [Module](Module.md)
 - 8  [HTTP 2 Client](HTTP2Client.md)
-- 9  [GC (Garbage Collector) Improvements](GC.md)
+- 9  [Try with Resources](Try-With-Resources.md)
+- 10 [GC (Garbage Collector) Improvements](GC.md)
