@@ -66,7 +66,7 @@ System.out.println("#" + s3.strip() + "#");
 System.out.println("#" + s3.stripLeading() + "#");
 System.out.println("#" + s3.stripTrailing() + "#");
 
-  // repeat()
+// repeat()
 // repteat n 次,为了性能内部实现为System.arrayCopy() 方法
 //final int limit = len * count;
 //final byte[] multiple = new byte[limit];
