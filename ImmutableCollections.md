@@ -129,3 +129,78 @@ AbstractImmutableList
 
 
 ```
+元素非空，如果为null 则抛出NullPointerException
+```java
+jshell> var list = List.of(1,2,3,4,5,null)
+|  异常错误 java.lang.NullPointerException
+|        at Objects.requireNonNull (Objects.java:221)
+|        at ImmutableCollections$ListN.<init> (ImmutableCollections.java:423)
+|        at List.of (List.java:902)
+|        at do_it$Aux (#9:1)
+|        at (#9:1)
+
+```
+## 不可变 Set
+Java 8 
+```java
+
+ Set<String> nonemptySet = new HashSet<>();
+ nonemptySet.add("one");
+ nonemptySet.add("two");
+ nonemptySet.add("three");
+ Set<String> immutableSet = Collections.unmodifiableSet(nonemptySet);
+
+```
+Java 9
+```java
+shell> var set = Set.of(1,2,3,4,3,3)
+|  异常错误 java.lang.IllegalArgumentException：duplicate element: 3
+|        at ImmutableCollections$SetN.<init> (ImmutableCollections.java:587)
+|        at Set.of (Set.java:562)
+|        at do_it$Aux (#10:1)
+|        at (#10:1)
+
+jshell> var set = Set.of(1,2,3)
+set ==> [2, 1, 3]
+
+
+jshell> var set = Set.of("one","two","three")
+set ==> [three, two, one]
+
+
+jshell> String[] nameArray = {"tom","bob","LiWei"}
+nameArray ==> String[3] { "tom", "bob", "LiWei" }
+
+jshell> var set = Set.of(nameArray)
+set ==> [LiWei, bob, tom]
+
+
+```
+## 不可变 Map
+
+java 8
+```java
+
+Map<Integer,String> nonemptyMap = new HashMap<>();
+ nonemptyMap.put(1,"one")
+ nonemptyMap.put(2,"two")
+ nonemptyMap.put(3,"three")
+ Map<Integer,String> immutableNonEmptyMap = Collections.unmodifiableMap(nonemptyMap);
+
+```
+Java 9
+```java
+
+jshell> Map<Integer,String> nonemptyImmutableMap = Map.of(1, "one", 2, "two", 3, "three")
+nonemptyImmutableMap ==> {2=two, 1=one, 3=three}
+
+// 别忘了导入 Map.entry
+jshell> import static java.util.Map.entry
+
+jshell> Map<Integer,String> map = Map.ofEntries(entry(1,"1"),entry(2,"2"),entry(3,"3"))
+map ==> {2=2, 1=1, 3=3}
+
+```
+## 参考资料
+
+- [immutable list](https://www.journaldev.com/12942/javase9-factory-methods-immutable-list)
