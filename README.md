@@ -35,7 +35,7 @@ jshell> var word = he
 查看方法签名与文档
 <div align="center"> <img src="pics/Tab_check_method.jpg"/> </div><br>
 
-## 默认导入 imports
+## 4. 默认导入 imports
 
 jshell> var list = new ArrayList<>(List.of(1,2,3,4,5,6,7))
 
@@ -56,7 +56,7 @@ List.of() 在java 9 被引入，可以直接使用ArrayList/List.of()，但我�
 - java.util.regex.*
 - java.util.stream.*
 
-## 自定义方法
+## 5. 自定义方法
 你可以直接定义一个实例方法而该方法无需在类里面，和ipython  类似
 ```java
 jshell> public Integer getRandomInteger(List<Integer> list){
@@ -69,21 +69,21 @@ jshell> public Integer getRandomInteger(List<Integer> list){
 <div align="center"> <img src="pics/ipython_lambda_method.jpg"/> </div><br>
 <div align="center"> <img src="pics/method2.jpg"/> </div><br>
 
-## 抓取变量
+## 6. 抓取变量
 > 抓取变量有通用的模式，以$开始，之后紧跟一个自增的数字
 
 <div align="center"> <img src="pics/scratch.jpg"/> </div><br>
 
-## 定义类
+## 7. 定义类
 你可以自定义一个类，并定义相应的方法/字段等
 <div align="center"> <img src="pics/class.jpg"/> </div><br>
 缺点是定义的类格式不好，有错误也很难发现，更好的方式时是使用 /open
 
-## 外部库
+## 8. 外部库
 引用外部库
 jshell --class-path /path/to/foo.jar
 
-## Jshell Cmd
+## 9. Jshell Cmd
 
 <div align="center"> <img src="pics/help.jpg"/> </div><br>
 
@@ -133,7 +133,7 @@ jshell> /list -start
 /open my_session.txt 打开之前保存的会话
 
 
-##  参考文档
+##  10. 参考文档
 - [jshell](https://www.infoq.com/articles/jshell-java-repl?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
 - [Oracle jshell](https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm#JSHEL-GUID-465BA4F5-E77D-456F-BCB7-D826AC1E18AE)
 
