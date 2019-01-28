@@ -1,22 +1,7 @@
 # Java9-11 新特性
 ___
-##  [Jshell](Jshell)
 
-
-## List.of()/Map.of()/Set.of()
-
-## var
-
-## interface 
-### private static method
-### public static method
-
-
-##Java DOC
-
-##  
-
-# Jshell
+# 一、 Jshell
 ____
 ## 1. 介绍
 
@@ -151,3 +136,4 @@ jshell> /list -start
 ##  参考文档
 - [jshell](https://www.infoq.com/articles/jshell-java-repl?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=articles_link&utm_content=link_text)
 - [Oracle jshell](https://docs.oracle.com/javase/9/jshell/introduction-jshell.htm#JSHEL-GUID-465BA4F5-E77D-456F-BCB7-D826AC1E18AE)
+
